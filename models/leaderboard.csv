@@ -1,0 +1,5 @@
+Model,CV_AUC_Mean,CV_AUC_Std,Val_AUC,Val_Accuracy,Val_Precision,Val_Recall,Val_F1,Train_Time_s
+Logistic Regression,0.725,0.0146,0.7224,0.656,0.5066,0.6571,0.5721,11.62
+Random Forest,0.8113,0.0173,0.7147,0.672,0.5293,0.5686,0.5482,20.3
+Gradient Boosting,0.8384,0.0133,0.6889,0.669,0.5351,0.4143,0.467,70.44
+XGBoost,0.8394,0.0124,0.6744,0.659,0.5184,0.3629,0.4269,11.2

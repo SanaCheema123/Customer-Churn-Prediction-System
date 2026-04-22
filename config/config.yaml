@@ -1,0 +1,80 @@
+project:
+  name: "Customer Churn Prediction System"
+  version: "1.0.0"
+  company: "AIVONEX SMC-PVT LTD"
+
+data:
+  raw_path: "data/raw/churn_data.csv"
+  processed_path: "data/processed/churn_processed.csv"
+  test_size: 0.20
+  val_size: 0.10
+  random_state: 42
+  target_column: "Churn"
+  synthetic_samples: 10000
+
+features:
+  numerical:
+    - tenure
+    - MonthlyCharges
+    - TotalCharges
+    - NumSupportCalls
+    - NumProductsUsed
+    - DaysSinceLastContact
+    - AvgMonthlyUsage
+    - ContractMonthsRemaining
+  categorical:
+    - Gender
+    - SeniorCitizen
+    - Partner
+    - Dependents
+    - PhoneService
+    - MultipleLines
+    - InternetService
+    - OnlineSecurity
+    - OnlineBackup
+    - DeviceProtection
+    - TechSupport
+    - StreamingTV
+    - StreamingMovies
+    - Contract
+    - PaperlessBilling
+    - PaymentMethod
+
+models:
+  logistic_regression:
+    C: 1.0
+    max_iter: 1000
+    random_state: 42
+  random_forest:
+    n_estimators: 200
+    max_depth: 10
+    min_samples_split: 5
+    random_state: 42
+  gradient_boosting:
+    n_estimators: 200
+    learning_rate: 0.1
+    max_depth: 5
+    random_state: 42
+  xgboost:
+    n_estimators: 200
+    learning_rate: 0.1
+    max_depth: 6
+    use_label_encoder: false
+    eval_metric: "logloss"
+    random_state: 42
+
+training:
+  best_model: "xgboost"
+  model_save_path: "models/"
+  report_path: "reports/"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  title: "Customer Churn Prediction API"
+  version: "1.0.0"
+
+dashboard:
+  host: "localhost"
+  port: 8501
+  title: "Churn Analytics Dashboard"
