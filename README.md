@@ -9,6 +9,7 @@ A full end-to-end **Customer Churn Prediction** system built for telecom compani
 The system ingests customer data, engineers domain-specific features, trains and evaluates
 four ML classifiers, and exposes the best model through a **REST API** and an interactive
 **Streamlit dashboard**.
+<img width="1370" height="609" alt="WhatsApp Image 2026-04-22 at 3 05 10 PM" src="https://github.com/user-attachments/assets/aaa7e55f-39e0-4f20-9a75-8e5ecaa64757" />
 
 ---
 
